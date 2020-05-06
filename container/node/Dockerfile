@@ -1,0 +1,3 @@
+FROM node:12.14.1
+EXPOSE 4200
+WORKDIR /app

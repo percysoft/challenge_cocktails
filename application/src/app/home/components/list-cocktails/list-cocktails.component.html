@@ -1,0 +1,46 @@
+<div class="container_cocktails">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelectTypeSearch"
+        >Tipo de busqueda</label
+      >
+    </div>
+    <select
+      class="custom-select"
+      id="inputGroupSelectTypeSearch"
+      [(ngModel)]="typeSearch"
+    >
+      <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+    </select>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Busca los mejores Cocteles!!</h5>
+  </div>
+  <div class="ng-autocomplete">
+    <ng-autocomplete
+      [data]="data"
+      [searchKeyword]="keywordTypeSearch"
+      (selected)="selectEvent($event)"
+      (inputChanged)="onChangeSearch($event)"
+      (inputFocused)="onFocused($event)"
+      [itemTemplate]="itemTemplate"
+      (inputCleared)="inputCleared($event)"
+      [notFoundTemplate]="notFoundTemplate"
+      notFoundText="Cocktel no encontrado!!!"
+    >
+    </ng-autocomplete>
+
+    <ng-template #itemTemplate let-item>
+      <a [innerHTML]="item[keywordTypeSearch]"></a>
+    </ng-template>
+
+    <ng-template #notFoundTemplate let-notFound>
+      <div [innerHTML]="notFound"></div>
+    </ng-template>
+  </div>
+  <hr />
+  <div class="container_card" *ngIf="detailCocktail.length > 0">
+    <app-cocktail *ngFor="let product of detailCocktail" [product]="product">
+    </app-cocktail>
+  </div>
+</div>

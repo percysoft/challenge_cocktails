@@ -1,27 +1,44 @@
-# ChallengeCocktail
+## Project installation CRM-ADMIN_REACT
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+The project is dockerizado and was configure in Makefile
 
-## Development server
+### `make image`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The node image is built
 
-## Code scaffolding
+### `make install`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+install the node modules
 
-## Build
+### `make start`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run Server in background http://0.0.0.0:4200/
 
-## Running unit tests
+### `make build`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Compile for the production
 
-## Running end-to-end tests
+### `make test`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run to the test
 
-## Further help
+### `make build-firebase`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run build for firebase
+
+### `make deploy-firebase`
+
+Deploy in hosting Firebase
+
+Steps for the install
+
+1. make image (it only installs once)
+2. make install
+3. make start
+
+Steps for the Deploy in Firebase
+
+1. make deploy-firebase
+
+La aplicación se encuentra despleada en la siguiente url.
+### `https://cocktails-e334c.web.app/`

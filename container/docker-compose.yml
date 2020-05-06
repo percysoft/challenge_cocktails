@@ -1,0 +1,10 @@
+version: "2"
+services:
+  frontendHost:
+    image: image_frontend_angular/node:12.14.1
+    container_name: container_frontend_angular
+    ports:
+      - 4200:4200
+    volumes:
+      - ./../application:/app
+    command: "${COMMAND}"

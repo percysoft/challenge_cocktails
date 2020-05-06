@@ -1,0 +1,24 @@
+.container_cocktails {
+  height: auto;
+  max-width: 100%;
+  margin: 1rem 2rem 21rem 2rem;
+  box-sizing: border-box;
+}
+
+.container_card {
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  grid-gap: 50px 20px;
+  @media (min-width: 321px) {
+    grid-template-columns: repeat(1, 2fr);
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 2fr);
+  }
+  @media (min-width: 980px) {
+    grid-template-columns: repeat(3, 2fr);
+  }
+  @media (min-width: 1264px) {
+    grid-template-columns: repeat(4, 2fr);
+  }
+}
