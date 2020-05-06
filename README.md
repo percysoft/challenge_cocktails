@@ -1,10 +1,10 @@
-## Project installation CRM-ADMIN_REACT
+## Project installation CHALLENGE_COCKTAILS
 
 The project is dockerizado and was configure in Makefile
 
 ### `make image`
 
-The node image is built
+The node image is build
 
 ### `make install`
 
